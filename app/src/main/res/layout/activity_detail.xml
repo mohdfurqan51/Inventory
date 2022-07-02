@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Detail_Activity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:layout_marginBottom="56dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.102">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="@string/category_name" />
+
+            <EditText
+                android:id="@+id/edit_product_name"
+                style="@style/EditorFieldStyle"
+                android:layout_weight="3"
+                android:hint="Name"
+                android:inputType="textCapWords" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="@string/category_quantity" />
+
+            <EditText
+                android:id="@+id/edit_product_quantity"
+                style="@style/EditorFieldStyle"
+                android:layout_weight="3"
+                android:hint="Quantity"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/CategoryStyle"
+                android:text="@string/category_price" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3">
+
+
+                <TextView
+                    android:id="@+id/rupee_label"
+                    style="@style/EditorUnitsStyle"
+                    android:text="Rs." />
+
+                <EditText
+                    android:id="@+id/edit_product_price"
+                    style="@style/EditorFieldStyle"
+                    android:layout_width="225dp"
+                    android:layout_marginLeft="20dp"
+                    android:hint="Price"
+                    android:inputType="number" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="297dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginBottom="92dp"
+        android:text="@string/items_text_view"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ProgressBar>
+</androidx.constraintlayout.widget.ConstraintLayout>
